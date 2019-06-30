@@ -285,9 +285,9 @@ public class EurekaClientServerRestIntegrationTest {
         System.out.println(f);
 
         // TODO Thread.currentThread().getContextClassLoader() 获取不到路径，先暂时这样；
-        WebAppContext webAppCtx = new WebAppContext(new File("./eureka-server/src/main/webapp").getAbsolutePath(), "/");
-        webAppCtx.setDescriptor(new File("./eureka-server/src/main/webapp/WEB-INF/web.xml").getAbsolutePath());
-        webAppCtx.setResourceBase(new File("./eureka-server/src/main/resources").getAbsolutePath());
+        WebAppContext webAppCtx = new WebAppContext(new File("../eureka-server/src/main/webapp").getAbsolutePath(), "/");
+        webAppCtx.setDescriptor(new File("../eureka-server/src/main/webapp/WEB-INF/web.xml").getAbsolutePath());
+        webAppCtx.setResourceBase(new File("../eureka-server/src/main/resources").getAbsolutePath());
         webAppCtx.setClassLoader(Thread.currentThread().getContextClassLoader());
         server.setHandler(webAppCtx);
 
